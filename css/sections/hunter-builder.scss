@@ -1,0 +1,90 @@
+/* Overall container style */
+.hunter-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hunter-select option {
+  padding: 10px;
+  transition: background-color 0.2s ease;
+  color: #fff !important;
+}
+
+/* Title style */
+.hunter-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Form styling */
+.hunter-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Label styling */
+.hunter-label {
+  font-size: 1.1em;
+  color: #fff;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Select box styling */
+.hunter-select {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #333;
+  transition: border-color 0.3s ease;
+  color: #fff;
+}
+
+.hunter-select:focus {
+  border-color: #5b9bd5;
+  outline: none;
+}
+
+/* Total score input styling */
+#total_score {
+  padding: 10px;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #e9e9e9;
+  color: #555;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .hunter-form {
+      grid-template-columns: 1fr;
+  }
+
+  .hunter-select, #total_score {
+      font-size: 1em;
+  }
+}
+
+/* Add hover effect for select options */
+.hunter-select option {
+  padding: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.hunter-select option:hover {
+  background-color: #f0f0f0;
+}

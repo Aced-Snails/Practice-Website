@@ -1,0 +1,999 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./css/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/* Resetting default margins, paddings, and box-sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Link styles */
+a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #005bb5;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px; /* Slightly larger font on mobile for readability */
+  }
+}
+/* Make text size responsive across all screens */
+html {
+  font-size: 16px; /* Base font size for larger screens */
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 14px; /* Smaller font size for very small screens */
+  }
+}
+/* General styles for single-page body */
+body.single,
+body.page,
+body.home.page {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #222;
+}
+
+body.home.page {
+  color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 80%;
+  max-width: 1500px;
+  margin: auto;
+  padding: 20px;
+}
+
+.container article {
+  background: rgba(51, 51, 51, 0.8); /* 0.8 makes it 80% opaque */
+  width: 75%;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.container article h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.container article p {
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+body.single #sidebar {
+  width: 25%;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+body.home.page #sidebar {
+  width: 25%;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.score,
+.no-score {
+  width: 20%;
+  float: right;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    gap: 10px;
+  }
+  body.single #sidebar {
+    width: 100%;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .container article,
+  #sidebar {
+    width: 100%;
+  }
+  #sidebar {
+    margin-top: 20px;
+    border-radius: 0;
+  }
+  .container article h1 {
+    font-size: 28px;
+  }
+  .container article p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container article {
+    padding: 10px;
+  }
+  body.single #sidebar {
+    width: 100%;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .container article h1 {
+    font-size: 24px;
+  }
+  .container article p {
+    font-size: 13px;
+  }
+}
+.archive-container {
+  width: 80%;
+  margin: 50px auto;
+  background: rgba(51, 51, 51, 0.8); /* 0.8 makes it 80% opaque */
+  padding: 20px;
+  display: block;
+}
+
+.category-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.archive-inner-container {
+  width: 25%; /* 4 columns */
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.archive-inner-container h1 {
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+}
+
+.section-break {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+article {
+  padding: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.pagination a,
+.pagination .page-number {
+  background-color: #0073e6;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.pagination a:hover,
+.pagination .page-number:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.pagination .current {
+  color: #333;
+  cursor: default;
+  font-weight: bold;
+}
+
+.pagination .prev,
+.pagination .next {
+  background-color: #ff9800;
+  padding: 10px 15px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+  color: #333;
+}
+
+.pagination .prev:hover,
+.pagination .next:hover {
+  background-color: #ff9800;
+}
+
+@media (max-width: 768px) {
+  .archive-container {
+    width: 95%;
+    padding: 15px;
+  }
+  .archive-inner-container {
+    width: 100%; /* Full width for mobile */
+    padding: 10px;
+  }
+  .pagination {
+    justify-content: center;
+  }
+  .pagination a,
+  .pagination .page-number {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  .pagination .prev,
+  .pagination .next {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+/* Header styles */
+header {
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  display: block; /* Ensures it takes up its own line */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-around;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+  position: relative;
+  padding: 10px;
+  z-index: 9999;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  color: #ff9800;
+}
+
+/* Hide submenus by default */
+.main-menu li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  background-color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+}
+
+/* Show submenu on hover for desktop */
+.main-menu li:hover > ul {
+  display: block; /* Show submenu when hovering over li */
+}
+
+/* Mobile-specific styles for header */
+@media screen and (max-width: 768px) {
+  nav {
+    display: none; /* Initially hidden */
+  }
+  nav ul li {
+    margin: 0 15px;
+    position: relative; /* Allow positioning of the submenu */
+  }
+  .main-menu li:hover > ul {
+    display: block;
+    position: absolute;
+    left: 100%;
+    left: 100%;
+    top: 0;
+  }
+  .nav-container nav.active {
+    display: flex;
+    background: rgba(51, 51, 51, 0.8); /* 0.8 makes it 80% opaque */
+    text-align: center;
+    margin: 5px auto;
+    width: 100%;
+    justify-content: center;
+  }
+  nav ul {
+    flex-direction: column; /* Stack items vertically on mobile */
+    display: none; /* Initially hide mobile nav */
+  }
+  nav ul li {
+    margin: 10px auto;
+    border-bottom: solid 1px;
+  }
+  nav.active ul {
+    display: flex; /* Show the menu when active */
+  }
+  /* Ensure submenus are hidden by default */
+  .main-menu li ul {
+    display: none;
+  }
+  /* Show submenu when parent item is clicked */
+  .main-menu li > a.active + ul {
+    display: block;
+  }
+  .main-menu li > a {
+    cursor: pointer;
+  }
+  /* Hamburger menu styles */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+  }
+  /* Hamburger active state for animation */
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+  }
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+  }
+}
+/* Hide hamburger on larger screens */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+/* Footer styles */
+footer {
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+footer .logo {
+  padding: 25px;
+}
+
+.disclaimer {
+  width: 50%;
+  padding: 20px;
+  margin: auto;
+}
+
+footer nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Mobile-specific styles for footer */
+@media screen and (max-width: 768px) {
+  footer nav ul {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+  }
+  .disclaimer {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer {
+    padding: 10px; /* Reduce padding on very small screens for better fit */
+  }
+  footer nav ul {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+  }
+  .disclaimer {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+  }
+}
+.search-container {
+  position: relative; /* Ensure the overlay is positioned correctly */
+  width: 250px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+}
+
+.search-overlay {
+  display: none; /* Hide overlay initially */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Optional: gives overlay a semi-transparent background */
+  z-index: 9999;
+  padding: 10px;
+}
+
+.search-overlay.active {
+  display: block; /* Show the overlay when active */
+}
+
+#search-results {
+  max-height: 300px; /* Optional: set a max height */
+  overflow-y: auto; /* Enable scrolling if there are too many results */
+  background-color: rgba(0, 0, 0, 0.7); /* Optional: add background to the results */
+  border-radius: 5px;
+}
+
+.search-result-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  background-color: #f0f0f0;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 768px) {
+  .nav-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .search-container {
+    position: relative;
+    width: 250px;
+    padding: 20px;
+  }
+}
+/* Hero Section */
+.hero-container {
+  padding: 100px;
+  width: 65%;
+  margin: auto;
+}
+
+.hero-container h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-container h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .hero-container {
+    width: 85%; /* Increase width to 85% for better mobile fit */
+    padding: 50px; /* Reduce padding for smaller screens */
+  }
+  .hero-container h1 {
+    font-size: 28px; /* Reduce font size for heading */
+    padding: 15px;
+  }
+  .hero-container h2 {
+    font-size: 20px; /* Reduce font size for subheading */
+    padding: 15px;
+  }
+}
+/* Further adjustments for very small screens (less than 600px) */
+@media screen and (max-width: 600px) {
+  .hero-container {
+    width: 95%; /* Take up almost the full width of the screen */
+    padding: 30px; /* Further reduce padding */
+  }
+  .hero-container h1 {
+    font-size: 24px; /* Further reduce font size for heading */
+    padding: 10px;
+  }
+  .hero-container h2 {
+    font-size: 18px; /* Further reduce font size for subheading */
+    padding: 10px;
+  }
+}
+/* Weapons Section */
+.overall-featured-container {
+  display: flex;
+  background: rgba(105, 105, 105, 0.7); /* Dark gray with 70% opacity */
+}
+
+.featured-title-1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.weapons-container {
+  flex: 1; /* Ensures it takes up equal space */
+  padding: 20px;
+}
+
+.weapons-grid {
+  display: flex;
+  flex-direction: column; /* Ensures weapon items are stacked vertically */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+}
+
+/* Weapon Item Styling */
+.weapon-item {
+  display: flex; /* Makes image and content inline */
+  align-items: center; /* Aligns items vertically */
+  gap: 15px; /* Space between image and content */
+  width: 100%; /* Ensures each item takes up full width of the container */
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background: #333;
+}
+
+.weapon-image img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.weapon-content {
+  flex: 1; /* Ensures the content takes up remaining space */
+  color: #fff;
+}
+
+.weapon-item h2 {
+  margin: 0;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .overall-featured-container {
+    display: flex;
+    background: rgba(105, 105, 105, 0.7);
+    flex-direction: column;
+  }
+  .weapons-container {
+    padding: 5px; /* Reduce padding on smaller screens */
+  }
+  .weapons-grid {
+    padding: 10px; /* Reduce grid padding for better fit */
+  }
+  .weapons-container h1 {
+    font-size: 24px; /* Reduce the font size of the heading on smaller screens */
+  }
+  .weapon-item {
+    flex-direction: column; /* Stack the image and content vertically */
+    padding: 10px; /* Reduce padding for better fit */
+    gap: 10px; /* Space between image and content when stacked */
+  }
+  .weapon-image img {
+    width: 80px; /* Smaller image size on mobile */
+    height: 80px; /* Maintain the aspect ratio */
+  }
+  .weapon-item h2 {
+    font-size: 1.2em; /* Reduce the font size of item titles on mobile */
+  }
+}
+/* Further adjustments for very small screens (less than 600px) */
+@media screen and (max-width: 600px) {
+  .overall-featured-container {
+    display: flex;
+    background: rgba(105, 105, 105, 0.7);
+    flex-direction: column;
+  }
+  .weapons-container h1 {
+    font-size: 20px; /* Even smaller heading font size for very small screens */
+  }
+  .weapon-item {
+    padding: 8px; /* Smaller padding for better fit */
+  }
+  .weapon-image img {
+    width: 70px; /* Even smaller image size */
+    height: 70px; /* Maintain aspect ratio */
+  }
+  .weapon-item h2 {
+    font-size: 1em; /* Reduce font size of item titles even more for very small screens */
+  }
+}
+/* Armor Section */
+.armor-container {
+  flex: 1; /* Ensures it takes up equal space */
+  padding: 20px; /* Adjusted padding to match the weapons section */
+}
+
+.featured-title-2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.armor-grid {
+  display: flex;
+  flex-direction: column; /* Ensures armor items are stacked vertically */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+}
+
+/* Armor Item Styling */
+.armor-item {
+  display: flex; /* Makes image and content inline */
+  align-items: center; /* Aligns items vertically */
+  gap: 15px; /* Space between image and content */
+  width: 100%; /* Ensures each item takes up full width of the container */
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background: #333;
+}
+
+.armor-container,
+.armor-item,
+.armor-image {
+  overflow: visible;
+}
+
+.armor-image img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.armor-content {
+  flex: 1; /* Ensures the content takes up remaining space */
+  color: #fff;
+}
+
+.armor-item h2 {
+  margin: 0;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .armor-container {
+    padding: 5px; /* Reduced padding for mobile, similar to weapons */
+  }
+  .armor-grid {
+    padding: 10px; /* Reduced grid padding on mobile */
+  }
+  .armor-container h1 {
+    font-size: 24px; /* Adjusted heading font size for mobile */
+  }
+  .armor-item {
+    flex-direction: column; /* Stack the image and content vertically */
+    padding: 10px; /* Reduced padding for better fit */
+    gap: 10px; /* Space between image and content when stacked */
+  }
+  .armor-image img {
+    width: 80px; /* Adjusted image size for mobile */
+    height: 80px; /* Maintain the aspect ratio */
+  }
+  .armor-item h2 {
+    font-size: 1.2em; /* Adjusted font size for item titles on mobile */
+  }
+}
+/* Further adjustments for very small screens (less than 600px) */
+@media screen and (max-width: 600px) {
+  .armor-container h1 {
+    font-size: 20px; /* Smaller heading font size for very small screens */
+  }
+  .armor-item {
+    padding: 8px; /* Smaller padding for better fit */
+  }
+  .armor-image img {
+    width: 70px; /* Smaller image size */
+    height: 70px; /* Maintain aspect ratio */
+  }
+  .armor-item h2 {
+    font-size: 1em; /* Reduced font size of item titles for very small screens */
+  }
+}
+/* Font Page Content */
+.front-page-content-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 80%;
+  margin: auto;
+  padding: 50px;
+}
+
+.front-page-content {
+  flex: 1;
+  max-width: 80%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#sidebar {
+  width: 25%; /* Adjusts the sidebar width, you can change this as well */
+  background: rgba(51, 51, 51, 0.8); /* 0.8 makes it 80% opaque */
+  padding: 15px;
+  border-radius: 5px; /* Optional: Adds rounded corners to sidebar */
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .front-page-content-container {
+    flex-direction: column; /* Stack the content and sidebar vertically */
+    width: 90%; /* Adjust width to fit smaller screens */
+    gap: 15px; /* Reduce gap between content and sidebar */
+  }
+  .front-page-content {
+    max-width: 100%; /* Make content take full width */
+    padding: 15px; /* Reduce padding for better fit */
+  }
+  #sidebar {
+    width: 100%; /* Make sidebar take full width on mobile */
+    padding: 10px; /* Reduce sidebar padding */
+  }
+  body.home.page #sidebar {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+  }
+}
+/* Further adjustments for very small screens (less than 600px) */
+@media screen and (max-width: 600px) {
+  .front-page-content-container {
+    padding: 10px; /* Further reduce padding for very small screens */
+  }
+  .front-page-content {
+    padding: 10px; /* Further reduce padding */
+  }
+  #sidebar {
+    padding: 8px; /* Smaller padding for sidebar */
+  }
+  body.home.page #sidebar {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+  }
+}
+/* Locations Section */
+.locations-container-all {
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 10px auto;
+  background-color: rgba(105, 105, 105, 0.7);
+}
+
+.location-title {
+  text-align: center;
+  padding: 20px;
+}
+
+.location-content h2,
+.location-content p {
+  color: #fff;
+}
+
+.locations-container-all h1 {
+  text-align: center;
+}
+
+.location-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.location-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.location-image {
+  display: flex;
+  justify-content: center;
+}
+
+.location-content {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.slider-controls button {
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.slider-controls button:hover {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+  .location-content {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+}
+/* Overall container style */
+.hunter-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hunter-select option {
+  padding: 10px;
+  transition: background-color 0.2s ease;
+  color: #fff !important;
+}
+
+/* Title style */
+.hunter-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Form styling */
+.hunter-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Label styling */
+.hunter-label {
+  font-size: 1.1em;
+  color: #fff;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Select box styling */
+.hunter-select {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #333;
+  transition: border-color 0.3s ease;
+  color: #fff;
+}
+
+.hunter-select:focus {
+  border-color: #5b9bd5;
+  outline: none;
+}
+
+/* Total score input styling */
+#total_score {
+  padding: 10px;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #e9e9e9;
+  color: #555;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .hunter-form {
+    grid-template-columns: 1fr;
+  }
+  .hunter-select, #total_score {
+    font-size: 1em;
+  }
+}
+/* Add hover effect for select options */
+.hunter-select option {
+  padding: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.hunter-select option:hover {
+  background-color: #f0f0f0;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

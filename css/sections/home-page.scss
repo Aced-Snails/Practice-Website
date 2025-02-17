@@ -1,0 +1,72 @@
+/* Font Page Content */
+.front-page-content-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 80%;
+  margin: auto;
+  padding: 50px;
+}
+
+.front-page-content {
+  flex: 1;
+  max-width: 80%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#sidebar {
+  width: 25%; /* Adjusts the sidebar width, you can change this as well */
+  background: rgba(51, 51, 51, 0.8); /* 0.8 makes it 80% opaque */
+  padding: 15px;
+  border-radius: 5px; /* Optional: Adds rounded corners to sidebar */
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .front-page-content-container {
+    flex-direction: column; /* Stack the content and sidebar vertically */
+    width: 90%; /* Adjust width to fit smaller screens */
+    gap: 15px; /* Reduce gap between content and sidebar */
+  }
+
+  .front-page-content {
+    max-width: 100%; /* Make content take full width */
+    padding: 15px; /* Reduce padding for better fit */
+  }
+
+  #sidebar {
+    width: 100%; /* Make sidebar take full width on mobile */
+    padding: 10px; /* Reduce sidebar padding */
+  }
+
+  body.home.page #sidebar {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+}
+}
+
+/* Further adjustments for very small screens (less than 600px) */
+@media screen and (max-width: 600px) {
+  .front-page-content-container {
+    padding: 10px; /* Further reduce padding for very small screens */
+  }
+
+  .front-page-content {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  #sidebar {
+    padding: 8px; /* Smaller padding for sidebar */
+  }
+
+  body.home.page #sidebar {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+}
+}

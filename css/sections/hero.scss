@@ -1,0 +1,52 @@
+/* Hero Section */
+.hero-container {
+  padding: 100px;
+  width: 65%;
+  margin: auto;
+}
+
+.hero-container h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-container h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+.hero-container {
+  width: 85%; /* Increase width to 85% for better mobile fit */
+  padding: 50px; /* Reduce padding for smaller screens */
+}
+
+.hero-container h1 {
+  font-size: 28px; /* Reduce font size for heading */
+  padding: 15px;
+}
+
+.hero-container h2 {
+  font-size: 20px; /* Reduce font size for subheading */
+  padding: 15px;
+}
+}
+
+/* Further adjustments for very small screens (less than 600px) */
+@media screen and (max-width: 600px) {
+.hero-container {
+  width: 95%; /* Take up almost the full width of the screen */
+  padding: 30px; /* Further reduce padding */
+}
+
+.hero-container h1 {
+  font-size: 24px; /* Further reduce font size for heading */
+  padding: 10px;
+}
+
+.hero-container h2 {
+  font-size: 18px; /* Further reduce font size for subheading */
+  padding: 10px;
+}
+}

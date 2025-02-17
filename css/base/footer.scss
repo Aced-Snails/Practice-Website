@@ -1,0 +1,54 @@
+/* Footer styles */
+footer {
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+footer .logo {
+  padding: 25px;
+}
+
+.disclaimer {
+  width: 50%;
+  padding: 20px;
+  margin: auto;
+}
+footer nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Mobile-specific styles for footer */
+@media screen and (max-width: 768px) {
+  footer nav ul {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .disclaimer {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+}
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    padding: 10px; /* Reduce padding on very small screens for better fit */
+  }
+  footer nav ul {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .disclaimer {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+}
+}

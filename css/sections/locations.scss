@@ -1,0 +1,69 @@
+/* Locations Section */
+.locations-container-all {
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 10px auto;
+  background-color: rgba(105, 105, 105, 0.7);
+}
+.location-title {
+    text-align: center;
+    padding: 20px;
+}
+.location-content h2,
+.location-content p {
+  color: #fff;
+}
+
+.locations-container-all h1 {
+  text-align: center;
+}
+
+.location-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.location-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.location-image {
+  display: flex;
+  justify-content: center;
+}
+
+.location-content {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.slider-controls button {
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.slider-controls button:hover {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+  .location-content {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+}

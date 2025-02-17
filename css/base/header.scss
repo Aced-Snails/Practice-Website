@@ -1,0 +1,165 @@
+/* Header styles */
+header {
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  display: block; /* Ensures it takes up its own line */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-around;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+  position: relative;
+  padding: 10px;
+  z-index: 9999;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  color: #ff9800;
+}
+
+/* Hide submenus by default */
+.main-menu li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  background-color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+}
+
+/* Show submenu on hover for desktop */
+.main-menu li:hover > ul {
+  display: block; /* Show submenu when hovering over li */
+}
+
+/* Mobile-specific styles for header */
+@media screen and (max-width: 768px) {
+  nav {
+    display: none; /* Initially hidden */
+  }
+  nav ul li {
+    margin: 0 15px;
+    position: relative; /* Allow positioning of the submenu */
+  }
+  .main-menu li:hover > ul {
+    display: block;
+    position: absolute;
+    left: 100%;
+    left: 100%;
+    top: 0;
+  }
+
+  .nav-container nav.active {
+    display: flex;
+    background: rgba(51, 51, 51, 0.8); /* 0.8 makes it 80% opaque */
+    text-align: center;
+    margin: 5px auto;
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack items vertically on mobile */
+    display: none; /* Initially hide mobile nav */
+  }
+
+  nav ul li {
+    margin: 10px auto;
+    border-bottom: solid 1px;
+  }
+
+  nav.active ul {
+    display: flex; /* Show the menu when active */
+  }
+
+  /* Ensure submenus are hidden by default */
+  .main-menu li ul {
+    display: none;
+  }
+
+  /* Show submenu when parent item is clicked */
+  .main-menu li > a.active + ul {
+    display: block;
+  }
+
+  .main-menu li > a {
+    cursor: pointer;
+  }
+
+  /* Hamburger menu styles */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+  }
+
+  /* Hamburger active state for animation */
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+  }
+
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+  }
+}
+
+/* Hide hamburger on larger screens */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}

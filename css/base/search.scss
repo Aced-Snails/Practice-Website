@@ -1,0 +1,87 @@
+.search-container {
+  position: relative; /* Ensure the overlay is positioned correctly */
+  width: 250px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+}
+
+.search-overlay {
+  display: none; /* Hide overlay initially */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Optional: gives overlay a semi-transparent background */
+  z-index: 9999;
+  padding: 10px;
+}
+
+.search-overlay.active {
+  display: block; /* Show the overlay when active */
+}
+
+#search-results {
+  max-height: 300px; /* Optional: set a max height */
+  overflow-y: auto; /* Enable scrolling if there are too many results */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Optional: add background to the results */
+  border-radius: 5px;
+}
+
+.search-result-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  background-color: #f0f0f0;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+//Mobile Style
+@media (max-width: 768px) {
+  .nav-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .search-container {
+    position: relative;
+    width: 250px;
+    padding: 20px;
+}
+}

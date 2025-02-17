@@ -1,0 +1,99 @@
+/* Armor Section */
+.armor-container {
+  flex: 1; /* Ensures it takes up equal space */
+  padding: 20px; /* Adjusted padding to match the weapons section */
+}
+
+.featured-title-2 {
+  text-align: center;
+  padding: 20px;
+}
+.armor-grid {
+  display: flex;
+  flex-direction: column; /* Ensures armor items are stacked vertically */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+}
+
+/* Armor Item Styling */
+.armor-item {
+  display: flex; /* Makes image and content inline */
+  align-items: center; /* Aligns items vertically */
+  gap: 15px; /* Space between image and content */
+  width: 100%; /* Ensures each item takes up full width of the container */
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background: #333;
+}
+.armor-container,
+.armor-item,
+.armor-image {
+  overflow: visible;
+}
+
+.armor-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.armor-content {
+  flex: 1; /* Ensures the content takes up remaining space */
+  color: #fff;
+}
+
+.armor-item h2 {
+  margin: 0;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .armor-container {
+    padding: 5px; /* Reduced padding for mobile, similar to weapons */
+  }
+
+  .armor-grid {
+    padding: 10px; /* Reduced grid padding on mobile */
+  }
+
+  .armor-container h1 {
+    font-size: 24px; /* Adjusted heading font size for mobile */
+  }
+
+  .armor-item {
+    flex-direction: column; /* Stack the image and content vertically */
+    padding: 10px; /* Reduced padding for better fit */
+    gap: 10px; /* Space between image and content when stacked */
+  }
+
+  .armor-image img {
+    width: 80px; /* Adjusted image size for mobile */
+    height: 80px; /* Maintain the aspect ratio */
+  }
+
+  .armor-item h2 {
+    font-size: 1.2em; /* Adjusted font size for item titles on mobile */
+  }
+}
+
+/* Further adjustments for very small screens (less than 600px) */
+@media screen and (max-width: 600px) {
+  .armor-container h1 {
+    font-size: 20px; /* Smaller heading font size for very small screens */
+  }
+
+  .armor-item {
+    padding: 8px; /* Smaller padding for better fit */
+  }
+
+  .armor-image img {
+    width: 70px; /* Smaller image size */
+    height: 70px; /* Maintain aspect ratio */
+  }
+
+  .armor-item h2 {
+    font-size: 1em; /* Reduced font size of item titles for very small screens */
+  }
+}

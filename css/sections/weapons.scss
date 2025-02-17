@@ -1,0 +1,108 @@
+/* Weapons Section */
+.overall-featured-container {
+  display: flex;
+  background: rgba(105, 105, 105, 0.7); /* Dark gray with 70% opacity */
+}
+.featured-title-1 {
+  text-align: center;
+  padding: 20px;
+}
+.weapons-container {
+  flex: 1; /* Ensures it takes up equal space */
+  padding: 20px;
+}
+
+.weapons-grid {
+  display: flex;
+  flex-direction: column; /* Ensures weapon items are stacked vertically */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+}
+
+/* Weapon Item Styling */
+.weapon-item {
+  display: flex; /* Makes image and content inline */
+  align-items: center; /* Aligns items vertically */
+  gap: 15px; /* Space between image and content */
+  width: 100%; /* Ensures each item takes up full width of the container */
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background: #333;
+}
+
+.weapon-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.weapon-content {
+  flex: 1; /* Ensures the content takes up remaining space */
+  color: #fff;
+}
+
+.weapon-item h2 {
+  margin: 0;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .overall-featured-container {
+    display: flex;
+    background: rgba(105, 105, 105, 0.7);
+    flex-direction: column;
+  }
+  .weapons-container {
+    padding: 5px; /* Reduce padding on smaller screens */
+  }
+
+  .weapons-grid {
+    padding: 10px; /* Reduce grid padding for better fit */
+  }
+
+  .weapons-container h1 {
+    font-size: 24px; /* Reduce the font size of the heading on smaller screens */
+  }
+
+  .weapon-item {
+    flex-direction: column; /* Stack the image and content vertically */
+    padding: 10px; /* Reduce padding for better fit */
+    gap: 10px; /* Space between image and content when stacked */
+  }
+
+  .weapon-image img {
+    width: 80px; /* Smaller image size on mobile */
+    height: 80px; /* Maintain the aspect ratio */
+  }
+
+  .weapon-item h2 {
+    font-size: 1.2em; /* Reduce the font size of item titles on mobile */
+  }
+}
+
+/* Further adjustments for very small screens (less than 600px) */
+@media screen and (max-width: 600px) {
+  .overall-featured-container {
+    display: flex;
+    background: rgba(105, 105, 105, 0.7);
+    flex-direction: column;
+  }
+  .weapons-container h1 {
+    font-size: 20px; /* Even smaller heading font size for very small screens */
+  }
+
+  .weapon-item {
+    padding: 8px; /* Smaller padding for better fit */
+  }
+
+  .weapon-image img {
+    width: 70px; /* Even smaller image size */
+    height: 70px; /* Maintain aspect ratio */
+  }
+
+  .weapon-item h2 {
+    font-size: 1em; /* Reduce font size of item titles even more for very small screens */
+  }
+}
